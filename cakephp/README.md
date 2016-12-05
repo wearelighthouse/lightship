@@ -12,7 +12,7 @@ There is a [`Makefile`](Makefile) included with various commands for ease of use
 
 #### Starting Docker
 
-`make up`git 
+`make up`
 
 #### Stopping Docker
 
