@@ -14,7 +14,7 @@ this without any major performance loss.
 
 ### Docker
 
-[Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.3) instead. Its basically all the things you need (Dockerwize)!
+[Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.3) - Its basically all the things you need (Dockerwize)!
 
 ### VirtualBox
 
