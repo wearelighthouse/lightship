@@ -14,9 +14,7 @@ this without any major performance loss.
 
 ### Docker
 
-[Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
-
-If your computer is a bit older you won't be able to install the above but don't worry just install [Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.3) instead.
+[Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.3) instead. Its basically all the things you need (Dockerwize)!
 
 ### VirtualBox
 
@@ -34,9 +32,9 @@ Run the following command to install it:
 
 Clone this repository somewhere:
 
-`git clone git@github.com:wearelighthouse/lightship.git`
+`git clone https://github.com/wearelighthouse/lightship.git`
 
-From within the created directory run:
+**Then from within the created directory run:**
 
 `make install`
 
