@@ -60,4 +60,6 @@ We will try to include a `Makefile` with each project so see the projects `READ.
 
 ## 4. Examples
 
+Here is a list of "starting" points to dockerize various types of projects.
+
 * [CakePHP](cakephp/)
