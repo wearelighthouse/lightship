@@ -17,10 +17,6 @@ this without any major performance loss.
 
 [Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v1.12.3) - Its basically all the things you need (Dockerwize)!
 
-### VirtualBox
-
-[VirtualBox for Mac](http://download.virtualbox.org/virtualbox/5.1.10/VirtualBox-5.1.10-112026-OSX.dmg)
-
 ### Homebrew
 
 Homebrew is "The missing package manager for macOS", pretty much it lets you easily install packages similar to `apt-get` on linux.
