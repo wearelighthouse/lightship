@@ -1,0 +1,35 @@
+version: '2'
+services:
+  nginx:
+    image: nginx-wordpress
+    ports:
+     - 80:80
+    volumes:
+     - ../../../:/usr/share/nginx/html
+    networks:
+     - network
+  fpm:
+    image: php-fpm-5.6
+    volumes:
+     - ../../../:/usr/share/nginx/html
+    networks:
+     - network
+  db:
+    image: mysql:5.7
+    ports:
+     - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+     - data:/var/lib/mysql
+    networks:
+     - network
+networks:
+  network:
+    driver: bridge
+volumes:
+  data:
+    driver: local

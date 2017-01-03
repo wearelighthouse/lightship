@@ -1,8 +1,8 @@
-# Docker setup for Cakephp3 development
+# Docker setup for Wordpress theme development
 
-Dump these files in the root of your project.
+Dump these files in the root of your theme.
 
-Create `.env` file from [`.env.example`](.env.example) and fill in appropriately, you will also need to update your `Datasources` in `app.php` to use these details.
+Create `.env` file from [`.env.example`](.env.example) and fill in appropriately, these will be the details you enter when running through the Wordpress setup. If you have already setup the site you will need to update `wp-config.php` yourself.
 
 **N.B.** The `host` for your database is `db` not `localhost`.
 

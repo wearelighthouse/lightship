@@ -61,3 +61,4 @@ We will try to include a `Makefile` with each project so see the projects `READ.
 Here is a list of "starting" points to dockerize various types of projects.
 
 * [CakePHP](cakephp/)
+* [Wordpress (theme development)](wordpress/)
