@@ -1,17 +1,17 @@
 version: '2'
 services:
   nginx:
-    image: wearelighthouse/nginx:wordpress
+    image: wearelighthouse/nginx:bedrock
     ports:
      - 80:80
     volumes:
-     - ../../../:/usr/share/nginx/html
+     - .:/usr/share/nginx/html
     networks:
      - network
   fpm:
     image: wearelighthouse/php-fpm:5.6
     volumes:
-     - ../../../:/usr/share/nginx/html
+     - .:/usr/share/nginx/html
     networks:
      - network
   db:
@@ -20,7 +20,7 @@ services:
      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_USER}
+      MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:

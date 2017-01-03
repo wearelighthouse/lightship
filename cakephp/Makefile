@@ -1,4 +1,4 @@
-.PHONY: cake composer deploy down install migrate test up
+.PHONY: bash cake composer deploy down install migrate test up
 
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
@@ -6,12 +6,20 @@ PROJECT := $(shell basename $(CURDIR))
 
 CMD=""
 
+bash:
+	docker run -it --rm \
+		-v $(PWD):/opt \
+		-w /opt \
+		--network=$(PROJECT)_network \
+		wearelighthouse/php-fpm:latest \
+		/bin/bash
+
 cake:
 	docker run -it --rm \
 		-v $(PWD):/opt \
 		-w /opt \
 		--network=$(PROJECT)_network \
-		cjquinn/cakephp-fpm:latest \
+		wearelighthouse/php-fpm:latest \
 		bin/cake $(CMD)
 
 composer:
@@ -19,7 +27,7 @@ composer:
 		-v $(PWD):/opt \
 		-w /opt \
 		--network=$(PROJECT)_network \
-		cjquinn/cakephp-fpm:latest \
+		wearelighthouse/php-fpm:latest \
 		composer $(CMD)
 
 deploy:
@@ -41,7 +49,7 @@ test:
 		-v $(PWD):/opt \
 		-w /opt \
 		--network=$(PROJECT)_network \
-		cjquinn/cakephp-fpm:latest \
+		wearelighthouse/php-fpm:latest \
 		vendor/bin/phpunit
 
 up:
