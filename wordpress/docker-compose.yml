@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx:
-    image: nginx-wordpress
+    image: wearelighthouse/nginx:wordpress
     ports:
      - 80:80
     volumes:
@@ -9,7 +9,7 @@ services:
     networks:
      - network
   fpm:
-    image: php-fpm-5.6
+    image: wearelighthouse/php-fpm:5.6
     volumes:
      - ../../../:/usr/share/nginx/html
     networks:
