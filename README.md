@@ -40,7 +40,7 @@ Clone this repository somewhere:
 ## 3. Usage and Gotyas
 
 Once this is installed you can start using Docker as your dev environment.
-If a project has a `docker-composer.yml` file it means its ready to be used with Docker, start the site by running:
+If a project has a `docker-compose.yml` file it means its ready to be used with Docker, start the site by running:
 
 `docker-compose up -d`
 
