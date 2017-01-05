@@ -1,4 +1,4 @@
-# Docker setup for Wordpress theme development
+# Docker setup for Bedrock Wordpress development
 
 Dump these files in the root of your project.
 
