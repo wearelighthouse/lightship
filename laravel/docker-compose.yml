@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx:
-    image: wearelighthouse/nginx:cakephp
+    image: wearelighthouse/nginx:laravel
     ports:
      - 80:80
     volumes:
@@ -10,7 +10,7 @@ services:
      - network
   fpm:
     # Currently using tags latest (for 7) and 5.6
-    image: wearelighthouse/php-fpm:latest
+    image: wearelighthouse/php-fpm:5.6
     volumes:
      - .:/usr/share/nginx/html
     networks:
@@ -21,8 +21,8 @@ services:
      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
      - data:/var/lib/mysql
