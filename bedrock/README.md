@@ -19,3 +19,5 @@ There is a [`Makefile`](Makefile) included with various commands for ease of use
 `make down`
 
 **N.B.** This must be done when switching between sites.
+
+There is also a [`Makefile`](theme/Makefile) for and operations required for the theme. This should be placed in the base of your theme.
