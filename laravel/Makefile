@@ -1,4 +1,4 @@
-.PHONY: artisan bash composer deploy down install migrate up
+.PHONY: artisan bash composer deploy down install migrate pull up
 
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
@@ -42,6 +42,10 @@ install:
 
 migrate:
 	make artisan CMD="migrate:refresh --seed"
+
+pull:
+	docker-compose pull
+	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 up:
 	docker-compose up -d

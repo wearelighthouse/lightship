@@ -1,4 +1,4 @@
-.PHONY: bash cake composer deploy down install migrate test up
+.PHONY: bash cake composer deploy down install migrate pull test up
 
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
@@ -43,6 +43,10 @@ install:
 
 migrate:
 	make cake CMD="migrations migrate"
+
+pull:
+	docker-compose pull
+	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 test:
 	docker run -it --rm \

@@ -1,4 +1,4 @@
-.PHONY: bash down up
+.PHONY: bash down pull up
 
 bash:
 	docker run -it --rm \
@@ -10,6 +10,10 @@ bash:
 
 down:
 	docker-compose down
+
+pull:
+	docker-compose pull
+	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 up:
 	docker-compose up -d

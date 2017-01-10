@@ -1,4 +1,4 @@
-.PHONY: bash composer down install up
+.PHONY: bash composer down install pull up
 
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
@@ -27,6 +27,10 @@ down:
 
 install:
 	make composer CMD=install
+
+pull:
+	docker-compose pull
+	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 up:
 	docker-compose up -d
