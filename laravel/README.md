@@ -1,8 +1,8 @@
-# Docker setup for Bedrock Wordpress development
+# Docker setup for Laravel development
 
 Dump these files in the root of your project.
 
-Create `.env` file from [`.env.example`](.env.example) and fill in appropriately. If you have already setup the site you will need to update `wp-config.php` yourself.
+Create `.env` file from [`.env.example`](.env.example) and fill in appropriately.
 
 **N.B.** The `host` for your database is `db` not `localhost`.
 
@@ -19,5 +19,3 @@ There is a [`Makefile`](Makefile) included with various commands for ease of use
 `make down`
 
 **N.B.** This must be done when switching between sites.
-
-There is also a [`Makefile`](theme/Makefile) for and operations required for the theme. This should be placed in the base of your theme.
