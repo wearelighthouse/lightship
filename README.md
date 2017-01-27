@@ -48,7 +48,7 @@ Then when you're finished working on that site don't forget to run:
 
 `docker-compose down`
 
-We will try to include a `Makefile` with each project so see the projects `README.md` for more information on running that site with Docker.
+We will include a `Makefile` with each project so check the `README.md` for more information on running that site with Docker.
 
 ### Gotyas
 
