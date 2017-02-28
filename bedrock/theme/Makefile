@@ -2,7 +2,7 @@
 
 MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 PWD := $(dir $(MAKEPATH))
-PROJECT := $(shell cd ../../../../ && basename `pwd`)
+PROJECT := $(shell cd ../../../../ && basename `pwd` | sed s/[\-_\ ]//g)
 
 CMD=""
 
