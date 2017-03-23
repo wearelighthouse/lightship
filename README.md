@@ -52,9 +52,10 @@ We will include a `Makefile` with each project so check the `README.md` for more
 
 ### Gotyas
 
-* You can only have one project up at one time - Docker exposes port 80 from the `nginx` container to VirtualBox, only one thing can be on a port at one time.
-* The VirtualBox's IP is `192.168.99.100`, this is where you will see your site - You can double check this by running `docker-machine ip` in your terminal - You can use this IP as the proxy when using Browsersync.
-* The installation should of installed a LaunchAgent to make sure the VirtualBox is started on startup. You can check it is running by running `docker-machine ls` in your terminal and looking for a machine called `default`. If it isn't running simply run `docker-machine start`
+* **One at a time:** You can only have one project up at one time - Docker exposes port 80 from the `nginx` container to VirtualBox, only one thing can be on a port at one time.
+* **IP:** The VirtualBox's IP is `192.168.99.100`, this is where you will see your site - You can double check this by running `docker-machine ip` in your terminal - You can use this IP as the proxy when using Browsersync.
+* **Folder names and hypens:** You can't run docker from within a folder with a hyphen - go ahead and remove it!
+* The installation should have installed a LaunchAgent to make sure the VirtualBox is started on startup. You can check it is running by running `docker-machine ls` in your terminal and looking for a machine called `default`. If it isn't running simply run `docker-machine start`
 
 ## 4. Examples
 
