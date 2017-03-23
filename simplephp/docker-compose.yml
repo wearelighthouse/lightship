@@ -1,0 +1,23 @@
+version: '2'
+services:
+  nginx:
+    image: wearelighthouse/nginx:wordpress
+    ports:
+     - 80:80
+    volumes:
+     - .:/usr/share/nginx/html
+    networks:
+     - network
+  fpm:
+    # Currently using tags latest (for 7) and 5.6
+    image: wearelighthouse/php-fpm:latest
+    volumes:
+     - .:/usr/share/nginx/html
+    networks:
+     - network
+networks:
+  network:
+    driver: bridge
+volumes:
+  data:
+    driver: local
