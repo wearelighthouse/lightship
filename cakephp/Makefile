@@ -46,7 +46,6 @@ migrate:
 
 pull:
 	docker-compose pull
-	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 test:
 	docker run -it --rm \

@@ -31,7 +31,6 @@ install:
 
 pull:
 	docker-compose pull
-	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 
 up:
 	docker-compose up -d

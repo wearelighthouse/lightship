@@ -63,5 +63,6 @@ Here is a list of "starting" points to dockerize various types of projects.
 
 * [Bedrock ("proper" Wordpress development)](bedrock/)
 * [CakePHP](cakephp/)
+* [Drupal](drupal/)
 * [Laravel](laravel/)
 * [Wordpress (theme development)](wordpress/)
