@@ -11,7 +11,7 @@ bash:
 		-v $(PWD):/opt \
 		-w /opt \
 		--network=$(PROJECT)_network \
-		wearelighthouse/php-fpm:5.6 \
+		wearelighthouse/php-fpm:latest \
 		/bin/bash
 
 composer:
@@ -19,7 +19,7 @@ composer:
 		-v $(PWD):/opt \
 		-w /opt \
 		--network=$(PROJECT)_network \
-		wearelighthouse/php-fpm:5.6 \
+		wearelighthouse/php-fpm:latest \
 		composer $(CMD)
 
 down:
